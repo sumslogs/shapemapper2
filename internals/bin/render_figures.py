@@ -84,7 +84,7 @@ def load_primers(filename):
     if filename is None or filename == "":
         return []
 
-    f = open(filename, "rU")
+    f = open(filename, "r")
     primers = []
     for line in f:
         if line[0] == '>' or len(line) < 1:
@@ -1017,7 +1017,7 @@ def write_histograms(shape, stderr,
 
     
 def load_tab(filename):
-    f = open(filename, "rU")
+    f = open(filename, "r")
 
     # do one pass to determine array length
     # TODO: might actually be faster to just resize array in memory and read in one pass

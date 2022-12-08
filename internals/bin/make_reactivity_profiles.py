@@ -205,7 +205,7 @@ def write_tab_file(seq,
             f.write("\n")
 
 def load_fasta(fastaname, rna, convert_to_rna=True):
-    f = open(fastaname, "rU")
+    f = open(fastaname, "r")
     seq = ""
     rna_count = 0
     in_selected_rna = False
@@ -237,7 +237,7 @@ def load_counts(filename):
     if filename is None:
         return None
 
-    f = open(filename, "rU")
+    f = open(filename, "r")
 
     # do one pass to determine array length
     # TODO: might actually be faster to just resize array in memory and read in one pass

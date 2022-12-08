@@ -33,7 +33,7 @@ global_scale_factors = {
 
 
 def load_scale_factors(filename):
-    f = open(filename, "rU")
+    f = open(filename, "r")
     nucs = "AUGC"
     scale_factors = {}
     for line in f:
@@ -53,7 +53,7 @@ def load_scale_factors(filename):
 
 
 def load_map(filename):
-    f = open(filename, "rU")
+    f = open(filename, "r")
     nums = []
     seq = []
     profile = []

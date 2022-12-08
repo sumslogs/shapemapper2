@@ -125,7 +125,7 @@ def normalize_profile(profile, stderrs, norm_factor):
     return norm_profile, norm_stderrs
 
 def load_profile(filename):
-    f = open(filename, "rU")
+    f = open(filename, "r")
 
     # do one pass to determine array length
     # TODO: might actually be faster to just resize array in memory and read in one pass
@@ -175,7 +175,7 @@ def write_norm_columns(profile,
                        decimal_places=6):
     n = "{{:.{}f}}".format(decimal_places)
 
-    f = open(filename, "rU")
+    f = open(filename, "r")
     lines = f.readlines()
     f.close()
 
@@ -235,7 +235,7 @@ def dup(filename, outname):
     when normalization can't be completed, but an output
     file is still expected.
     """
-    f = open(filename, "rU")
+    f = open(filename, "r")
     lines = f.readlines()
     f.close()
     o = open(outname, "w")
